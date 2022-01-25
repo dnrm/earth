@@ -1,17 +1,27 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
+import Navigation from "../components/Navigation";
 
 export default function Home() {
+    const [navShowing, setNavShowing] = useState(false);
+
+    const toggleNavbar = () => {
+        console.log('a')
+        setNavShowing(!navShowing);
+    };
+
     return (
         <div className="bg-dark">
+            {navShowing ? <Navigation /> : null}
             <Head>
                 <title>Learning to Earth &lt;3</title>
             </Head>
-            <Navbar />
+            <Navbar toggleNavbar={toggleNavbar} />
             <div className="top-information py-10 px-6 mx-auto text-white flex justify-between items-center">
                 <p className="font-space-grotesk">
                     Developed by: Daniel Medina
@@ -24,7 +34,7 @@ export default function Home() {
                         <Link href="/">
                             <a>HOME</a>
                         </Link>
-                        <Link href="/">
+                        <Link href="#learn">
                             <a>LEARN</a>
                         </Link>
                         <Link href="/">
@@ -34,13 +44,13 @@ export default function Home() {
                             <a>EXTRA RESOURCES</a>
                         </Link>
                     </div>
-                    <div className="quote p-6 text-white tracking-tighter font-space-grotesk text-xl">
+                    <div className="quote p-6 text-white tracking-tighter font-space-grotesk text-xl hidden md:visible">
                         <p>“The Earth is what we all have in common.”</p>
                         <p>– Wendell Berry</p>
                     </div>
                 </div>
-                <div className="circle text-dark grid place-items-center max-w-96 -mt-36 -mb-28">
-                    <div className="earth-photo absolute z-10 h-full w-1/4">
+                <div className="circle text-dark grid place-items-center max-w-96 md:-mt-36 md:-mb-28">
+                    <div className="earth-photo absolute z-10 h-full w-1/2 md:w-1/4 animate-spin">
                         <Image
                             src="/earth.png"
                             layout="fill"
@@ -48,7 +58,7 @@ export default function Home() {
                             alt="earth picture"
                         />
                     </div>
-                    <div className="svg-blob h-full w-2/5">
+                    <div className="svg-blob h-full w-96 md:w-2/5">
                         <svg
                             viewBox="0 0 500 500"
                             xmlns="http://www.w3.org/2000/svg"
@@ -71,37 +81,46 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="learn bg-leaf wiggle px-52 py-36">
-                <div className="heading-learn flex justify-between items-center">
-                    <h1 className="font-space-grotesk text-5xl font-bold text-white">
-                        Learn
-                    </h1>
-                    <h1 className="font-space-grotesk text-5xl font-bold text-white">
-                        🌱
-                    </h1>
-                </div>
-                <div className="learn-content flex justify-between items-center font-space-grotesk text-2xl text-white pt-8">
-                    <p>
-                        Knowing to care about the environment is becoming
-                        increasingly important ever since humans began to
-                        exploit and make use of the Earth’s natural resources.
-                        Learn about current environmental problems and their
-                        causes by reading the information below!
-                    </p>
-                </div>
-                <div className="learn-cards grid grid-cols-1 md:grid-cols-2 mt-16 gap-4">
-                    <Card
-                        img="https://source.unsplash.com/random"
-                        title={"What is deforestation and why is it so severe?"}
-                    ></Card>
-                    <Card
-                        img="https://source.unsplash.com/random"
-                        title={"What is deforestation and why is it so severe?"}
-                    ></Card>
-                    <Card
-                        img="https://source.unsplash.com/random"
-                        title={"What is deforestation and why is it so severe?"}
-                    ></Card>
+            <div id="learn" className="learn bg-leaf wiggle w-full py-36">
+                <div className="max-w-6xl px-4 mx-auto">
+                    <div className="heading-learn flex justify-between items-center">
+                        <h1 className="font-space-grotesk text-5xl font-bold text-white">
+                            Learn
+                        </h1>
+                        <h1 className="font-space-grotesk text-5xl font-bold text-white">
+                            🌱
+                        </h1>
+                    </div>
+                    <div className="learn-content flex justify-between items-center font-space-grotesk text-2xl text-white pt-8">
+                        <p>
+                            Knowing to care about the environment is becoming
+                            increasingly important ever since humans began to
+                            exploit and make use of the Earth’s natural
+                            resources. Learn about current environmental
+                            problems and their causes by reading the information
+                            below!
+                        </p>
+                    </div>
+                    <div className="learn-cards grid grid-cols-1 md:grid-cols-2 mt-16 gap-4">
+                        <Card
+                            img="https://source.unsplash.com/random"
+                            title={
+                                "What is deforestation and why is it so severe?"
+                            }
+                        ></Card>
+                        <Card
+                            img="https://source.unsplash.com/random"
+                            title={
+                                "What is deforestation and why is it so severe?"
+                            }
+                        ></Card>
+                        <Card
+                            img="https://source.unsplash.com/random"
+                            title={
+                                "What is deforestation and why is it so severe?"
+                            }
+                        ></Card>
+                    </div>
                 </div>
             </div>
         </div>

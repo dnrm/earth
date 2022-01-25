@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Navbar = ({ visibility }) => {
+const Navbar = ({ toggleNavbar }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const Navbar = ({ visibility }) => {
                 isVisible ? "opacity-100" : "opacity-0"
             } fixed top-0 left-0 z-50 w-full bg-dark p-6 text-white font-bold shadow-2xl flex items-center justify-start gap-4 transition-all duration-200 ease-in-out`}
         >
-            <div className="hamburger">
+            <div className="hamburger" onClick={toggleNavbar}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-8 w-8"
