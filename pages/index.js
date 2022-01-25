@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
@@ -17,18 +18,20 @@ export default function Home() {
 
     return (
         <div className="bg-dark">
-            {navShowing ? <Navigation /> : null}
+            {navShowing ? <Navigation toggleNavbar={toggleNavbar} /> : null}
             <Head>
                 <title>Learning to Earth &lt;3</title>
             </Head>
-            <Navbar toggleNavbar={toggleNavbar} />
+            <AnimatePresence>
+                <Navbar toggleNavbar={toggleNavbar} />
+            </AnimatePresence>
             <div className="top-information py-10 px-6 mx-auto text-white flex justify-between items-center">
                 <p className="font-space-grotesk">
                     Developed by: Daniel Medina
                 </p>
                 <p className="font-space-grotesk">medina.dev</p>
             </div>
-            <div className="bg-leaf hero mx-6 wiggle mb-24">
+            <div className="bg-leaf hero mx-6 wiggle mb-0">
                 <div className="top-layer flex justify-between items-start">
                     <div className="nav p-4 text-white font-bold underline tracking-tighter text-3xl flex flex-col font-raleway">
                         <Link href="/">
@@ -43,10 +46,6 @@ export default function Home() {
                         <Link href="/">
                             <a>EXTRA RESOURCES</a>
                         </Link>
-                    </div>
-                    <div className="quote p-6 text-white tracking-tighter font-space-grotesk text-xl hidden md:visible">
-                        <p>“The Earth is what we all have in common.”</p>
-                        <p>– Wendell Berry</p>
                     </div>
                 </div>
                 <div className="circle text-dark grid place-items-center max-w-96 md:-mt-36 md:-mb-28">
@@ -75,13 +74,34 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="bottom-text">
-                    <div className="quote p-6 text-white tracking-tighter font-space-grotesk text-xl">
+                    <div className="animate-pulse quote p-6 text-white tracking-tighter font-space-grotesk text-xl">
                         <p>“The Earth is what we all have in common.”</p>
                         <p>– Wendell Berry</p>
                     </div>
                 </div>
             </div>
-            <div id="learn" className="learn bg-leaf wiggle w-full py-36">
+            <div
+                id="learn"
+                className="bg-dark flex justify-center items-center w-full py-8 text-white"
+            >
+                <a href="#learn">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-8 w-8 animate-ping"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M16 17l-4 4m0 0l-4-4m4 4V3"
+                        />
+                    </svg>
+                </a>
+            </div>
+            <div className="bg-leaf wiggle pt-36 pb-36">
                 <div className="max-w-6xl px-4 mx-auto">
                     <div className="heading-learn flex justify-between items-center">
                         <h1 className="font-space-grotesk text-5xl font-bold text-white">
@@ -103,21 +123,39 @@ export default function Home() {
                     </div>
                     <div className="learn-cards grid grid-cols-1 md:grid-cols-2 mt-16 gap-4">
                         <Card
-                            img="https://source.unsplash.com/random"
+                            img="/deforestation.jpeg"
                             title={
                                 "What is deforestation and why is it so severe?"
                             }
                         ></Card>
                         <Card
-                            img="https://source.unsplash.com/random"
+                            img="/pollution.jpeg"
                             title={
-                                "What is deforestation and why is it so severe?"
+                                "The mass amounts of pollution in the ocean and its causes"
                             }
                         ></Card>
                         <Card
-                            img="https://source.unsplash.com/random"
+                            img="/air-pollution.jpeg"
                             title={
-                                "What is deforestation and why is it so severe?"
+                                "How air pollution is affecting both the beauty of cities and their health"
+                            }
+                        ></Card>
+                        <Card
+                            img="/global-warming.jpeg"
+                            title={
+                                "Global warming is ending with our poles and polar bears, take action"
+                            }
+                        ></Card>
+                        <Card
+                            img="/acid-rain.jpeg"
+                            title={
+                                "How pollutants are making their way back to earth as acid rain"
+                            }
+                        ></Card>
+                        <Card
+                            img="/overpopulation.jpeg"
+                            title={
+                                "Why is overpopulation such an important issue?"
                             }
                         ></Card>
                     </div>

@@ -8,8 +8,6 @@ const Card = ({ img, title, body }) => {
         <div className="image relative w-full h-full">
         <Image
           layout="fill"
-          width={100}
-          height={100}
           src={img}
           objectFit="cover"
           alt="Learn!"
