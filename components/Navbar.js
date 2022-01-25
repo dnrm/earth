@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
-const Navbar = ({ toggleNavbar }) => {
-    const [isVisible, setIsVisible] = useState(false);
+const Navbar = ({ toggleNavbar, withScroll }) => {
+    const [isVisible, setIsVisible] = useState(
+        withScroll === true ? false : true
+    );
 
     useEffect(() => {
-        document.addEventListener("scroll", () => {
-            if (window.scrollY > 100) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        });
+        if (withScroll === true) {
+            document.addEventListener("scroll", () => {
+                if (window.scrollY > 100) {
+                    setIsVisible(true);
+                } else {
+                    setIsVisible(false);
+                }
+            });
+        }
     }, []);
 
     return (
@@ -36,7 +41,9 @@ const Navbar = ({ toggleNavbar }) => {
                 </svg>
             </div>
             <h1 className="text-white font-space-grotesk text-xl">
-                Learning to Earth &lt;3
+                <Link href="/">
+                    <a>Learning to Earth &lt;3</a>
+                </Link>
             </h1>
         </div>
     );

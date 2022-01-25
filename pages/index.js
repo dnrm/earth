@@ -2,17 +2,17 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export default function Home() {
     const [navShowing, setNavShowing] = useState(false);
 
     const toggleNavbar = () => {
-        console.log('a')
         setNavShowing(!navShowing);
     };
 
@@ -23,7 +23,7 @@ export default function Home() {
                 <title>Learning to Earth &lt;3</title>
             </Head>
             <AnimatePresence>
-                <Navbar toggleNavbar={toggleNavbar} />
+                <Navbar toggleNavbar={toggleNavbar} withScroll={true} />
             </AnimatePresence>
             <div className="top-information py-10 px-6 mx-auto text-white flex justify-between items-center">
                 <p className="font-space-grotesk">
@@ -114,46 +114,51 @@ export default function Home() {
                     <div className="learn-content flex justify-between items-center font-space-grotesk text-2xl text-white pt-8">
                         <p>
                             Knowing to care about the environment is becoming
-                            increasingly important ever since humans began to
-                            exploit and make use of the Earth’s natural
-                            resources. Learn about current environmental
-                            problems and their causes by reading the information
-                            below!
+                            increasingly important since humans began to exploit
+                            and make use of the Earth’s natural resources. Learn
+                            about current environmental problems and their
+                            causes by reading the information below!
                         </p>
                     </div>
                     <div className="learn-cards grid grid-cols-1 md:grid-cols-2 mt-16 gap-4">
                         <Card
                             img="/deforestation.jpeg"
+                            href="/deforestation"
                             title={
                                 "What is deforestation and why is it so severe?"
                             }
                         ></Card>
                         <Card
                             img="/pollution.jpeg"
+                            href="/oceanic-pollution"
                             title={
                                 "The mass amounts of pollution in the ocean and its causes"
                             }
                         ></Card>
                         <Card
                             img="/air-pollution.jpeg"
+                            href="/air-pollution"
                             title={
                                 "How air pollution is affecting both the beauty of cities and their health"
                             }
                         ></Card>
                         <Card
                             img="/global-warming.jpeg"
+                            href="/global-warming"
                             title={
                                 "Global warming is ending with our poles and polar bears, take action"
                             }
                         ></Card>
                         <Card
                             img="/acid-rain.jpeg"
+                            href="/acid-rain"
                             title={
                                 "How pollutants are making their way back to earth as acid rain"
                             }
                         ></Card>
                         <Card
                             img="/overpopulation.jpeg"
+                            href="/overpopulation"
                             title={
                                 "Why is overpopulation such an important issue?"
                             }
@@ -161,6 +166,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
