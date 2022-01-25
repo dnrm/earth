@@ -7,7 +7,7 @@ import Tweet from "../components/Tweet";
 
 import React from "react";
 
-const Pollution = () => {
+const Deforestation = () => {
     const [navShowing, setNavShowing] = useState(false);
 
     const toggleNavbar = () => {
@@ -21,96 +21,87 @@ const Pollution = () => {
                 {navShowing ? <Navigation toggleNavbar={toggleNavbar} /> : null}
                 <div className="hero mt-20 p-8 py-16 bg-leaf wiggle">
                     <h1 className="text-6xl font-space-grotesk text-white tracking-tighter font-bold w-full md:text-left text-center">
-                        Oceanic Pollution
+                        Deforestation
                     </h1>
                 </div>
                 <div className="body max-w-5xl mx-auto py-16">
                     <div className="relative h-64">
                         <Image
                             objectFit="cover"
-                            src="/pollution.jpeg"
+                            src="/deforestation.jpeg"
                             alt="Bottle in ocean"
                             layout="fill"
                         />
                     </div>
                     <h1 className="text-white text-4xl font-space-grotesk font-bold pb-2 pt-8">
-                        The Mass Amounts of Pollution in the Ocean and Its
-                        Causes
+                        What is deforestation and why is it so severe?
                     </h1>
                     <p className="text-white text-md font-space-grotesk">
-                        It is no doubt that the amount of trash in the ocean is
-                        growing at an alarming rate. It is estimated that there
-                        are about 5.25 trillion pieces of plastic in the oceans
-                        as of 2021.
+                        As human development rises, deforestation does too.
+                        Deforestation is the act of cutting down trees and
+                        shrubs to make room for new growth. It can also be
+                        explained as the purposeful clearing of forest land.
                     </p>
                     <br />
                     <h2 className="text-white text-2xl font-space-grotesk font-bold">
-                        Why is there so much plastic?
+                        What is causing deforestation?
                     </h2>
                     <p className="text-white text-md font-space-grotesk">
-                        What is causing this much trash to be dumped in the
-                        ocean? The most common ways plastic and trash end up in
-                        the ocean are by people littering, not recycling, and
-                        products that go down the drain.
+                        Deforestation is fueled by agriculture and wood
+                        extraction. Mining is another cause of deforestation,
+                        since trees need to be removed in order to break the
+                        soil. Climate change is also a big factor in
+                        deforestation. Since the climate is hotter, wildfires
+                        are more likely to occur and therefore burning more
+                        trees.
                     </p>
                     <br />
                     <Tweet
-                        quote={'"No water, no life. No blue, no green."'}
-                        author={"Sylvia Earle 🌱"}
+                        quote={
+                            '"Sadly, it\'s much easier to create a desert than to create a forest."'
+                        }
+                        author={"James Lovelock 🌱"}
                     />
                     <br />
                     <h2 className="text-white text-2xl font-space-grotesk font-bold">
-                        Why is this bad?
+                        Why is deforestation bad?
                     </h2>
                     <p className="text-white text-md font-space-grotesk">
-                        Trash in the ocean is a very severe issue because it is
-                        toxic to wildlife and even humans. In the case of
-                        plastics, they can make their way up the food chain in
-                        the form of microplastics. The consumption of these
-                        microplastics can result in cancer or birth defects.
-                    </p>
-                    <br />
-                    <div className="relative h-80">
-                        <Image
-                            objectFit="cover"
-                            src="/ocean-wildlife.jpeg"
-                            alt="Bottle in ocean"
-                            layout="fill"
-                        />
-                    </div>
-                    <br />
-                    <h2 className="text-white text-2xl font-space-grotesk font-bold">
-                        Other Consequences
-                    </h2>
-                    <p className="text-white text-md font-space-grotesk">
-                        Another consequence that comes from oceanic pollution is
-                        that beaches are now being filled by trash and their
-                        beauty being destroyed. Many people have taken action to
-                        clean up the beaches and reduce the amount of trash in
-                        the ocean such as{" "}
-                        <a
-                            href="https://teamseas.org/"
-                            className="text-teal-500"
-                        >
-                            TeamSeas
-                        </a>{" "}
-                        and{" "}
-                        <a
-                            href="https://www.greenpeace.org/international/campaign/ocean-declaration/"
-                            className="text-teal-500"
-                        >
-                            . Greenpeace
-                        </a>
+                        Deforestation contributes to the loss of animal and
+                        plant habitats. When a forest is cut down, animals are
+                        displaced and if they don&apos; find another habitat,
+                        they die. Another effect of deforestation is the
+                        increase of greenhouse gases. Since trees produce
+                        oxygen, cutting them down reduces the amount of oxygen
+                        and increases the amount of carbon dioxide.
                     </p>
                     <br />
                     <div className="relative h-96">
                         <Image
                             objectFit="cover"
-                            src="/beach-trash.jpeg"
+                            src="/deforestation-aerial.jpeg"
                             alt="Bottle in ocean"
                             layout="fill"
                         />
                     </div>
+                    <br />
+                    <h2 className="text-white text-2xl font-space-grotesk font-bold">
+                        Who is taking action?
+                    </h2>
+                    <p className="text-white text-md font-space-grotesk">
+                        Common solutions to deforestation include passing of
+                        laws that state how much and which trees you can cut
+                        down, reforestation, which is plating more trees, and
+                        sustainable alternatives for tree based products.
+                        Organisations such as{" "}
+                        <a
+                            href="https://teamtrees.org/"
+                            className="text-teal-500"
+                        >
+                            TeamTrees
+                        </a>{" "}
+                        have taken action to plant millions of trees.
+                    </p>
                 </div>
             </div>
             <Footer />
@@ -118,4 +109,4 @@ const Pollution = () => {
     );
 };
 
-export default Pollution;
+export default Deforestation;

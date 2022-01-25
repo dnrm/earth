@@ -16,7 +16,7 @@ const Navbar = ({ toggleNavbar, withScroll }) => {
                 }
             });
         }
-    }, []);
+    }, [withScroll]);
 
     return (
         <div
