@@ -149,20 +149,6 @@ export default function Home() {
                                 "Global warming is ending with our poles and polar bears, take action"
                             }
                         ></Card>
-                        <Card
-                            img="/acid-rain.jpeg"
-                            href="/acid-rain"
-                            title={
-                                "How pollutants are making their way back to earth as acid rain"
-                            }
-                        ></Card>
-                        <Card
-                            img="/overpopulation.jpeg"
-                            href="/overpopulation"
-                            title={
-                                "Why is overpopulation such an important issue?"
-                            }
-                        ></Card>
                     </div>
                 </div>
             </div>
