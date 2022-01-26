@@ -34,7 +34,7 @@ export default function Home() {
             </AnimatePresence>
             <div className="top-information py-10 px-6 mx-auto text-white flex justify-between items-center">
                 <p className="font-space-grotesk">
-                    Developed by: Daniel Medina
+                    Daniel Medina
                 </p>
                 <p className="font-space-grotesk underline">
                     <a href="https://medina.dev">medina.dev</a>
@@ -57,16 +57,17 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-                <div className="circle text-dark grid place-items-center max-w-96 md:-mt-36 md:-mb-28">
-                    <div className="earth-photo absolute z-10 h-full w-1/2 md:w-1/4 animate-spin">
+                <div className="circle text-dark flex justify-center items-center max-w-96 md:-mt-36 md:-mb-28">
+                    <div className="earth-photo absolute z-10 h-80 inline-block md:h-full w-1/2 md:w-1/4 animate-spin">
                         <Image
                             src="/earth.png"
                             layout="fill"
                             objectFit="contain"
                             alt="earth picture"
+                            className="inline-block"
                         />
                     </div>
-                    <div className="svg-blob h-full w-96 md:w-2/5">
+                    <div className="svg-blob h-full w-84 md:w-2/5 inline-block">
                         <svg
                             viewBox="0 0 500 500"
                             xmlns="http://www.w3.org/2000/svg"
