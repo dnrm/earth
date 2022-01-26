@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Tweet from "../components/Tweet";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Deforestation = () => {
     const [navShowing, setNavShowing] = useState(false);
@@ -15,7 +16,12 @@ const Deforestation = () => {
     };
 
     return (
-        <div className="bg-dark">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.25, type: "tween" }}
+            className="bg-dark"
+        >
             <div className="bg-dark overflow-x-hidden border-b-2 border-gray-700">
                 <Navbar toggleNavbar={toggleNavbar} withScroll={false} />
                 {navShowing ? <Navigation toggleNavbar={toggleNavbar} /> : null}
@@ -49,16 +55,16 @@ const Deforestation = () => {
                     </h2>
                     <p className="text-white text-md font-space-grotesk">
                         Global warming is caused by these factors:
-                        <ul className="list-disc list-inside">
-                            <li>
-                                Carbon dioxide released into the atmosphere
-                                absorbs sunlight.
-                            </li>
-                            <li>Fossil fuel burning.</li>
-                            <li>Deforestation</li>
-                            <li>Industrial activity</li>
-                        </ul>
                     </p>
+                    <ul className="text-white text-md font-space-grotesk list-disc list-inside">
+                        <li>
+                            Carbon dioxide released into the atmosphere absorbs
+                            sunlight.
+                        </li>
+                        <li>Fossil fuel burning.</li>
+                        <li>Deforestation</li>
+                        <li>Industrial activity</li>
+                    </ul>
                     <br />
                     <Tweet
                         quote={
@@ -81,7 +87,7 @@ const Deforestation = () => {
                     <div className="relative h-96">
                         <Image
                             objectFit="cover"
-                            objectPosition={'top'}
+                            objectPosition={"top"}
                             src="/polar-bear.jpeg"
                             alt="Bottle in ocean"
                             layout="fill"
@@ -91,7 +97,7 @@ const Deforestation = () => {
                 </div>
             </div>
             <Footer />
-        </div>
+        </motion.div>
     );
 };
 

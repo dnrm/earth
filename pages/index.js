@@ -8,6 +8,8 @@ import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import HowToHelp from "../components/HowToHelp";
+import ExtraResources from "../components/ExtraResources";
 
 export default function Home() {
     const [navShowing, setNavShowing] = useState(false);
@@ -17,7 +19,12 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-dark">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, type: "tween" }}
+            className="bg-dark"
+        >
             {navShowing ? <Navigation toggleNavbar={toggleNavbar} /> : null}
             <Head>
                 <title>Learning to Earth &lt;3</title>
@@ -29,7 +36,9 @@ export default function Home() {
                 <p className="font-space-grotesk">
                     Developed by: Daniel Medina
                 </p>
-                <p className="font-space-grotesk">medina.dev</p>
+                <p className="font-space-grotesk underline">
+                    <a href="https://medina.dev">medina.dev</a>
+                </p>
             </div>
             <div className="bg-leaf hero mx-6 wiggle mb-0">
                 <div className="top-layer flex justify-between items-start">
@@ -37,13 +46,13 @@ export default function Home() {
                         <Link href="/">
                             <a>HOME</a>
                         </Link>
-                        <Link href="#learn">
+                        <Link href="/#learn">
                             <a>LEARN</a>
                         </Link>
-                        <Link href="/">
+                        <Link href="/#how-to-help">
                             <a>HOW TO HELP</a>
                         </Link>
-                        <Link href="/">
+                        <Link href="/#extra-resources">
                             <a>EXTRA RESOURCES</a>
                         </Link>
                     </div>
@@ -152,7 +161,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <HowToHelp />
+            <ExtraResources />
             <Footer />
-        </div>
+        </motion.div>
     );
 }

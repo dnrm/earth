@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Tweet from "../components/Tweet";
+import { motion } from "framer-motion";
 
 import React from "react";
 
@@ -15,7 +16,12 @@ const Pollution = () => {
     };
 
     return (
-        <div className="bg-dark">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.25, type: "tween" }}
+            className="bg-dark"
+        >
             <div className="bg-dark overflow-x-hidden border-b-2 border-gray-700">
                 <Navbar toggleNavbar={toggleNavbar} withScroll={false} />
                 {navShowing ? <Navigation toggleNavbar={toggleNavbar} /> : null}
@@ -114,7 +120,7 @@ const Pollution = () => {
                 </div>
             </div>
             <Footer />
-        </div>
+        </motion.div>
     );
 };
 

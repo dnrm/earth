@@ -21,7 +21,7 @@ const Navbar = ({ toggleNavbar, withScroll }) => {
     return (
         <div
             className={`${
-                isVisible ? "opacity-100" : "opacity-0"
+                isVisible ? "visible" : "invisible"
             } fixed top-0 left-0 z-50 w-full bg-dark p-6 text-white font-bold shadow-2xl flex items-center justify-start gap-4 transition-all duration-200 ease-in-out`}
         >
             <div className="hamburger" onClick={toggleNavbar}>

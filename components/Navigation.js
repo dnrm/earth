@@ -49,12 +49,12 @@ const Navigation = ({ toggleNavbar }) => {
                         </Link>
                     </li>
                     <li className="font-bold underline text-5xl md:text-8xl text-white font-raleway w-full tracking-tighter">
-                        <Link href="#learn">
+                        <Link href="/#how-to-help">
                             <a>HOW TO HELP</a>
                         </Link>
                     </li>
                     <li className="font-bold underline text-5xl md:text-8xl text-white font-raleway w-full tracking-tighter">
-                        <Link href="#learn">
+                        <Link href="/#extra-resources">
                             <a>EXTRA RESOURCES</a>
                         </Link>
                     </li>
