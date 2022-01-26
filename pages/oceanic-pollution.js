@@ -7,6 +7,7 @@ import Tweet from "../components/Tweet";
 import { motion } from "framer-motion";
 
 import React from "react";
+import Head from "next/head";
 
 const Pollution = () => {
     const [navShowing, setNavShowing] = useState(false);
@@ -22,15 +23,18 @@ const Pollution = () => {
             transition={{ duration: 0.25, type: "tween" }}
             className="bg-dark"
         >
+            <Head>
+                <title>Air Pollution</title>
+            </Head>
             <div className="bg-dark overflow-x-hidden border-b-2 border-gray-700">
                 <Navbar toggleNavbar={toggleNavbar} withScroll={false} />
                 {navShowing ? <Navigation toggleNavbar={toggleNavbar} /> : null}
                 <div className="hero mt-20 p-8 py-16 bg-leaf wiggle">
-                    <h1 className="text-6xl font-space-grotesk text-white tracking-tighter font-bold w-full md:text-left text-center">
+                    <h1 className="text-4xl md:text-6xl font-space-grotesk text-white tracking-tighter font-bold w-full md:text-left text-center">
                         Oceanic Pollution
                     </h1>
                 </div>
-                <div className="body max-w-5xl mx-auto py-16">
+                <div className="body max-w-5xl mx-auto py-16 px-2">
                     <div className="relative h-64">
                         <Image
                             objectFit="cover"
