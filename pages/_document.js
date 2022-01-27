@@ -10,7 +10,10 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <meta name="description" content="Learn how to take care of the environment!" />
+                    <meta
+                        name="description"
+                        content="Learn how to take care of the environment!"
+                    />
                     <link rel="manifest" href="/manifest.json" />
                     <link
                         href="/icon-192x192.png"

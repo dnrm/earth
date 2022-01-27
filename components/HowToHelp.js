@@ -4,7 +4,10 @@ import Image from "next/image";
 
 const HowToHelp = () => {
     return (
-        <div className="bg-dark pt-16 border-b-2 border-gray-600 pb-16 w-full" id="how-to-help">
+        <div
+            className="bg-dark pt-16 border-b-2 border-gray-600 pb-16 w-full"
+            id="how-to-help"
+        >
             <div className="max-w-6xl px-4 mx-auto">
                 <div className="flex items-center justify-between">
                     <h1 className="font-space-grotesk text-5xl font-bold text-white">

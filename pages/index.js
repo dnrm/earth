@@ -33,9 +33,7 @@ export default function Home() {
                 <Navbar toggleNavbar={toggleNavbar} withScroll={true} />
             </AnimatePresence>
             <div className="top-information py-10 px-6 mx-auto text-white flex justify-between items-center">
-                <p className="font-space-grotesk">
-                    Daniel Medina
-                </p>
+                <p className="font-space-grotesk">Daniel Medina</p>
                 <p className="font-space-grotesk underline">
                     <a href="https://medina.dev">medina.dev</a>
                 </p>
