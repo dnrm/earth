@@ -58,7 +58,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="circle text-dark flex justify-center items-center max-w-96 md:-mt-36 md:-mb-28">
-                    <div className="earth-photo absolute z-10 h-80 inline-block md:h-full w-1/2 md:w-1/4 animate-spin">
+                    <div className="earth-photo absolute z-10 h-80 inline-block md:h-full w-1/2 md:w-1/4 animate-spin-slow">
                         <Image
                             src="/earth.png"
                             layout="fill"

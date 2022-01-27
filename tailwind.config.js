@@ -14,6 +14,9 @@ module.exports = {
                 "space-grotesk": "'Space Grotesk', sans-serif;",
                 raleway: "'Raleway', sans-serif;",
             },
+            animation: {
+                "spin-slow": "spin 5s linear infinite",
+            },
         },
     },
     plugins: [],
