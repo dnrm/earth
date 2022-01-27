@@ -39,52 +39,36 @@ export default function Home() {
                 </p>
             </div>
             <div className="bg-leaf hero mx-6 wiggle mb-0">
-                <div className="top-layer flex justify-between items-start">
-                    <div className="nav p-4 text-white font-bold underline tracking-tighter text-3xl flex flex-col font-raleway">
-                        <Link href="/">
-                            <a>HOME</a>
-                        </Link>
-                        <Link href="/#learn">
-                            <a>LEARN</a>
-                        </Link>
-                        <Link href="/#how-to-help">
-                            <a>HOW TO HELP</a>
-                        </Link>
-                        <Link href="/#extra-resources">
-                            <a>EXTRA RESOURCES</a>
-                        </Link>
+                <div className="circle bg-black flex-col text-dark flex justify-center items-start max-w-96">
+                    <div className="top-layer flex justify-between items-start">
+                        <div className="nav p-4 text-white font-bold underline tracking-tighter text-3xl flex flex-col font-raleway">
+                            <Link href="/">
+                                <a>HOME</a>
+                            </Link>
+                            <Link href="/#learn">
+                                <a>LEARN</a>
+                            </Link>
+                            <Link href="/#how-to-help">
+                                <a>HOW TO HELP</a>
+                            </Link>
+                            <Link href="/#extra-resources">
+                                <a>EXTRA RESOURCES</a>
+                            </Link>
+                        </div>
                     </div>
-                </div>
-                <div className="circle text-dark flex justify-center items-center max-w-96 md:-mt-36 md:-mb-28">
-                    <div className="earth-photo absolute z-10 h-80 inline-block md:h-full w-1/2 md:w-1/4 animate-spin-slow">
-                        <Image
-                            src="/earth.png"
-                            layout="fill"
-                            objectFit="contain"
-                            alt="earth picture"
-                            className="inline-block"
-                        />
+                    <div className="earth-photo z-10 h-96 my-2 inline-block w-full">
+                        <iframe
+                            src="/spline/index.html"
+                            frameBorder="0"
+                            width={"100%"}
+                            height={"100%"}
+                        ></iframe>
                     </div>
-                    <div className="svg-blob h-full w-84 md:w-2/5 inline-block">
-                        <svg
-                            viewBox="0 0 500 500"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlnsXlink="http://www.w3.org/1999/xlink"
-                            width="100%"
-                            id="blobSvg"
-                        >
-                            <path
-                                id="blob"
-                                d="M443,296.5Q395,343,371.5,403.5Q348,464,285,453.5Q222,443,190.5,399Q159,355,100,333Q41,311,33,247.5Q25,184,95.5,168.5Q166,153,194,105.5Q222,58,287,43Q352,28,365.5,97.5Q379,167,435,208.5Q491,250,443,296.5Z"
-                                fill="currentColor"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-                <div className="bottom-text">
-                    <div className="animate-pulse quote p-6 text-white tracking-tighter font-space-grotesk text-xl">
-                        <p>“The Earth is what we all have in common.”</p>
-                        <p>– Wendell Berry</p>
+                    <div className="bottom-text">
+                        <div className="animate-pulse text-left w-full quote p-6 text-white tracking-tighter font-space-grotesk text-xl">
+                            <p>“The Earth is what we all have in common.”</p>
+                            <p>– Wendell Berry</p>
+                        </div>
                     </div>
                 </div>
             </div>
