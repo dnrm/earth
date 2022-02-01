@@ -24,7 +24,7 @@ const Pollution = () => {
             className="bg-dark"
         >
             <Head>
-                <title>Air Pollution</title>
+                <title>Oceanic Pollution</title>
             </Head>
             <div className="bg-dark overflow-x-hidden border-b-2 border-gray-700">
                 <Navbar toggleNavbar={toggleNavbar} withScroll={false} />
@@ -110,13 +110,15 @@ const Pollution = () => {
                             className="text-teal-500"
                         >
                             . Greenpeace
-                        </a>
+                        </a>.{" "}
+                        Another consequence is the increasing amount of wasted
+                        water, which results in empty dams and lakes.
                     </p>
                     <br />
                     <div className="relative h-96">
                         <Image
                             objectFit="cover"
-                            src="/beach-trash.jpeg"
+                            src="/empty-dam.jpg"
                             alt="Bottle in ocean"
                             layout="fill"
                         />

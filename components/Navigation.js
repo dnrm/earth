@@ -64,13 +64,13 @@ const Navigation = ({ toggleNavbar }) => {
                 </p>
                 <div className="image w-80 h-5/6 relative md:block hidden">
                     <Image
-                        src="/forest.jpeg"
+                        src="/leaf.jpeg"
                         alt="forest"
                         layout="fill"
                         objectFit="cover"
                         className="relative"
                         placeholder="blur"
-                        blurDataURL="/forest-small.jpeg"
+                        blurDataURL="/leaf-min.jpeg"
                     />
                 </div>
             </div>

@@ -32,7 +32,7 @@ const Deforestation = () => {
                     <div className="relative h-64">
                         <Image
                             objectFit="cover"
-                            src="/deforestation.jpeg"
+                            src="/deforestation.jpg"
                             alt="Bottle in ocean"
                             layout="fill"
                         />

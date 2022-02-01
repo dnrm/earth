@@ -38,7 +38,7 @@ const Deforestation = () => {
                     <div className="relative h-64">
                         <Image
                             objectFit="cover"
-                            src="/air-pollution.jpeg"
+                            src="/air-pollution.jpg"
                             alt="Bottle in ocean"
                             layout="fill"
                         />

@@ -114,7 +114,7 @@ export default function Home() {
                     </div>
                     <div className="learn-cards grid grid-cols-1 md:grid-cols-2 mt-16 gap-4">
                         <Card
-                            img="/deforestation.jpeg"
+                            img="/deforestation.jpg"
                             href="/deforestation"
                             title={
                                 "What is deforestation and why is it so severe?"
@@ -128,14 +128,14 @@ export default function Home() {
                             }
                         ></Card>
                         <Card
-                            img="/air-pollution.jpeg"
+                            img="/air-pollution.jpg"
                             href="/air-pollution"
                             title={
                                 "How air pollution is affecting both the beauty of cities and their health"
                             }
                         ></Card>
                         <Card
-                            img="/global-warming.jpeg"
+                            img="/winter.jpg"
                             href="/global-warming"
                             title={
                                 "Global warming is ending with our poles and polar bears, take action"

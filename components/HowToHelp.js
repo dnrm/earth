@@ -124,7 +124,7 @@ const HowToHelp = () => {
                             <div className="relative w-full h-full">
                                 <Image
                                     objectFit="cover"
-                                    src="/deforestation.jpeg"
+                                    src="/deforestation.jpg"
                                     alt="deforestation"
                                     layout="fill"
                                 />
